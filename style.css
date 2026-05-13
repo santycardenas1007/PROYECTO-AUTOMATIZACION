@@ -3,7 +3,7 @@ body{
 }
 
 #imagen{
-    background-image: url(./imagen.jpg);
+    background-image: url("./imagen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
