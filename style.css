@@ -3,12 +3,12 @@ body{
 }
 
 #imagen{
-    background-image: url(TITULO.jpg);
+    background-image: url(./imagen.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    width: 101%;
-    height: 481Spx;
+    width: 100%;
+    height: 400px;
 
     color:white;
     text-align:center;
