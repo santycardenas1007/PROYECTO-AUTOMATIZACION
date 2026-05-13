@@ -32,20 +32,11 @@ body{
     justify-content:space-evenly;
     padding:40px;
 }
-
-.tarjeta_desc{
-    width: 450px;
-    height: 600px;
-
-    border: solid 2px #000;
-
-    padding: 20px;
+.card{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.tarjeta_desc h3{
-    font-size: 32px;
-}
-
-.tarjeta_desc p{
-    font-size: 22px;
-}
