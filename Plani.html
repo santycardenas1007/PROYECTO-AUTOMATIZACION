@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANIFICACION</title>
+
+    <link rel="stylesheet" href="planificacion.css">
+</head>
+<body>
+
+    <header>
+        <h1>PLANIFICACION</h1>
+        <p>DISEÑO Y PLANIFICACION DEL PROYECTO</p>
+    </header>
+
+    <main class="contenedor-tarjetas">
+
+        <div class="tarjeta">
+            <img src="imagenes/proyecto1.jpg" alt="Proyecto 1">
+
+            <div class="contenido">
+                <h2>CLASIFICADOR AUTOMATIZADO</h2>
+                <H3>Este diseño simula un proceso industrial de control de calidad.</H3>
+
+                <p>
+                    ¿Cómo funciona?: Un objeto avanza por una pequeña banda transportadora. La ESP32-CAM apunta a un punto fijo. Cuando el objeto pasa, la cámara analiza sus píxeles. Si detecta un color específico (por ejemplo, rojo para una pieza defectuosa), envía una señal digital al ESP32 DevKit V1.
+                    Lógica de programación: * Cámara: Captura la imagen, segmenta el color usando el espacio de color HSV (Hue, Saturation, Value) y decide si cumple el criterio.
+                    DevKit V1: Escucha la señal de la cámara. Al recibir el "alerta de pieza roja", calcula el tiempo de llegada y activa un servomotor 🦾 para desviar el objeto hacia la bandeja de descarte.
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img src="imagenes/proyecto2.jpg" alt="Proyecto 2">
+
+            <div class="contenido">
+                <h2>SISTEMA DE ACCESO DE RECONOCIMIENTO FACIAL</h2>
+                <H3>Este proyecto se enfoca en la seguridad e Internet de las Cosas (IoT).</H3>
+
+                <p>
+                    ¿Cómo funciona?: La ESP32-CAM ejecuta un modelo ligero de detección y reconocimiento de rostros (usando la librería estándar esp-face). Compara las facciones de la persona frente a la puerta con una base de datos de rostros previamente guardados en su memoria de destello (Flash) o en una tarjeta MicroSD.
+                    Lógica de programación:
+                    Cámara: Si el rostro coincide con un usuario autorizado, la cámara envía un comando serial (UART) al DevKit V1 con el ID del usuario.
+                    DevKit V1: Recibe el ID, activa un relevador (Relay) para energizar una cerradura solenoide magnética 🔓 durante 5 segundos y, en paralelo, podría encender un LED verde o mostrar un mensaje en una pantalla LCD.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img src="imagenes/proyecto3.jpg" alt="Proyecto 3">
+
+            <div class="contenido">
+                <h2>VEHICULO AUTONOMO DE MONITOREO</h2>
+                <H3>Este diseño se adentra en la robótica móvil y la navegación autónoma.</H3>
+
+                <p>
+                    ¿Cómo funciona?: El vehículo se mueve usando motores de corriente directa (DC). La ESP32-CAM va montada al frente y procesa el entorno en tiempo real para encontrar un "objetivo" (como una línea en el suelo o una pelota que debe seguir).
+                    Lógica de programación:
+                    Cámara: Calcula el "error de centro". Por ejemplo, si la pelota está muy a la derecha del marco de la foto, la cámara calcula qué tan descentrada está y envía este dato al DevKit V1.
+                    DevKit V1: Recibe el valor del error y aplica un algoritmo de control (como un control PID básico) para variar la velocidad de los motores izquierdo y derecho mediante señales PWM (Modulación por Ancho de Pulsos) 🏎‍🟀, logrando que el carrito gire y se centre con el objeto.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="contenedor-volver">
+        <a href="index.html" class="boton-volver">
+            Volver al inicio
+        </a>
+    </div>
+
+</body>
+</html>
